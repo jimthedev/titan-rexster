@@ -1,0 +1,13 @@
+web:
+  build: .
+  links:
+    - elasticsearch
+    - cassandra
+  ports:
+    - "8182:8182"
+    - "8183:8183"
+    - "8184:8184"
+elasticsearch:
+  image: elasticsearch
+cassandra:
+  image: jimthedev/cassandra
